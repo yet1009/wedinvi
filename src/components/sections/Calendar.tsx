@@ -40,19 +40,18 @@ const Calendar = ({ date }: { date: string }) => {
 
   return (
     <Section
-        className={cx('container')}
-        title={
-            <div className={cx('wrap-header')}>
-            <span className={cx('txt-date')}>
-              {format(weddingDate, 'yyyy.MM.dd')}
-            </span>
-                    <span className={cx('txt-time')}>
-              {format(weddingDate, 'aaa h시 eeee', { locale: ko })}
-            </span>
-            </div>
-        }
+      className={cx('container')}
+      title={
+        <div className={cx('wrap-header')}>
+          <span className={cx('txt-date')}>
+            {format(weddingDate, 'yyyy.MM.dd')}
+          </span>
+          <span className={cx('txt-time')}>
+            {format(weddingDate, 'aaa h시 eeee', { locale: ko })}
+          </span>
+        </div>
+      }
     >
-
       <div className={cx('wrap-calendar')}>
         <style>{css}</style>
         <DayPicker
