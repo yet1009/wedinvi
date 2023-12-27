@@ -18,7 +18,7 @@ const Map = ({ location }: { location: Location }) => {
   const mapContainer = useRef(null);
   useEffect(() => {
     const script = document.createElement('script');
-    script.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.REACT_APP_KAKAKO_MAP_KEY}&autoload=false`;
+    script.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.REACT_APP_KAKAO_MAP_KEY}&autoload=false`;
     script.async = true;
 
     document.head.appendChild(script);
@@ -86,8 +86,8 @@ function WayToCome({
     <div className={cx('wrap-waytocome')}>
       <div className={cx('txt-label')}>{label}</div>
       <ul>
-        {list.map((waytocome) => (
-          <li>{waytocome}</li>
+        {list.map((waytocome, idx) => (
+          <li key={`kk___${idx}`}>{waytocome}</li>
         ))}
       </ul>
     </div>
